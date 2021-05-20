@@ -1,0 +1,1 @@
+<h1>HOME VIEW CONTENT</h1>
