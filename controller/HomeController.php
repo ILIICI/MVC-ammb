@@ -12,13 +12,14 @@ class HomeController extends Controller
 	}
 	public function Index(){
 		
-		$this->render('HomeView');
+		$this->render('HomeView',$this->sqlQuery('getData'),$this->sqlQuery('getData'),$this->sqlQuery('getData'));
+		
 	}
 	public function Test(){
 		echo "Hello Test";
 	}
 	public function unu(){
-		$this->retriveData();
+		
 	}
 }
 

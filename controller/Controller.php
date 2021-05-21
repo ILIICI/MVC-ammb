@@ -8,15 +8,15 @@ class Controller{
 		
 		
 	}
-	public function render($fileName){
+	public function render($fileName,$headerParameters='',$bodyParameters=[],$footerParameters=[]){
 
-		$view = new View($fileName);
+		$view = new View($fileName,$headerParameters,$bodyParameters,$footerParameters);
 		return $view;
 		
 	}
-	public function retriveData(){
+	public function sqlQuery(){
 		$model = new Model();
-		return $model->getData("name","learn","1");
+		return $model->getData("name","learn");
 		
 	}
 

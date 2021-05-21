@@ -9,22 +9,17 @@ class Model extends Db
 	}
 
 
-	public function getData($columnName,$tableName,$id){
-		$query = "SELECT $columnName FROM $tableName WHERE id=$id"  ; 
+	public function getData($columnName,$tableName){
+		$query = "SELECT * FROM $tableName"  ; 
 		$stmt = $this->connect()->query($query);
-		$row = $stmt->fetchAll();
-		foreach ($row as $value) {
-		echo $value[$columnName];
+		//$row = $stmt->fetchAll();
+		//foreach ($row as $key => $value) {
+		//	print_r($value);
+		//echo $value[$columnName];
+		
+		while ($row = $stmt->fetchALL()) {
+			return $row;
 		}
-		//while ($row = $stmt->fetch()){
-		//	if($row != "NULL"){
-		//		echo $row[$columnName] . "<br>";
-		//	}
-		//	
-		//}
-		//while () {
-		//echo $row[$columnName];
-		//}
 	}
 	public function insertData(){
 

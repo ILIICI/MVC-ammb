@@ -1,5 +1,3 @@
-
-<h1>Hello Footer</h1>
-
+<br>
 <?php
-//echo $this->header()['title'];
+echo $footerParameters[1]['footer'];?>

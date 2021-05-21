@@ -2,8 +2,11 @@
 
 class View
 {
-	
+	var $headerParameters;
+	var $bodyParameters;
+	var $footerParameters;
 	function __construct($fileNameView,$headerParameters=[],$bodyParameters=[],$footerParameters=[]){
+
 		$this->render($fileNameView,$headerParameters,$bodyParameters,$footerParameters);
 	}
 
@@ -12,10 +15,12 @@ class View
 		$this->body($fileNameView,$bodyParameters);
 		$this->footer($footerParameters);
 	}
-	private function header($headerParameters =[]){
+	private function header($headerParameters = []){
 		if (file_exists(VIEW.'layout'.DIRECTORY_SEPARATOR.'Header.php')) {
 			require_once (VIEW.'layout'.DIRECTORY_SEPARATOR.'Header.php');
-			return $headerParameters;
+			
+			//var_dump($headerParameters);
+			return $this->headerParameters;
 		}else{
 			echo "View  Header doesn't exists";
 		}
@@ -23,16 +28,17 @@ class View
 	private function body($fileName,$bodyParameters = []){
 		if (file_exists(VIEW.$fileName.'.php')) {
 			require_once (VIEW.$fileName.'.php');
-			return $bodyParameters;
+			return $this->bodyParameters;
+			//return array_values($bodyParameters);
 		}else{
 			echo "View  render() doesn't exists";
 		}
 		
 	}
-	private function footer($footerParameters =[]){
+	private function footer($footerParameters = []){
 		if (file_exists(VIEW.'layout'.DIRECTORY_SEPARATOR.'Footer.php')) {
 			require_once (VIEW.'layout'.DIRECTORY_SEPARATOR.'Footer.php');
-			return $footerParameters;
+			return $this->footerParameters;
 		}else{
 			echo "View  Footer doesn't exists";
 		}

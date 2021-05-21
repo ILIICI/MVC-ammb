@@ -1,1 +1,3 @@
-<h1>HOME VIEW CONTENT</h1>
+<br>
+<?php
+echo $bodyParameters[0]['text'];?>

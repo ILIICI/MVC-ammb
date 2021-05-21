@@ -1,5 +1,5 @@
 
-<h1>Hello HEADER</h1>
 
+<br>
 <?php
-//echo $this->header()['title'];
+echo $headerParameters[1]['name'];?>
