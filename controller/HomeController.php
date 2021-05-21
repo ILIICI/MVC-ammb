@@ -17,6 +17,9 @@ class HomeController extends Controller
 	public function Test(){
 		echo "Hello Test";
 	}
+	public function unu(){
+		$this->retriveData();
+	}
 }
 
 ?>
