@@ -18,8 +18,6 @@ class View
 	private function header($headerParameters = []){
 		if (file_exists(VIEW.'layout'.DIRECTORY_SEPARATOR.'Header.php')) {
 			require_once (VIEW.'layout'.DIRECTORY_SEPARATOR.'Header.php');
-			
-			//var_dump($headerParameters);
 			return $this->headerParameters;
 		}else{
 			echo "View  Header doesn't exists";
@@ -29,7 +27,6 @@ class View
 		if (file_exists(VIEW.$fileName.'.php')) {
 			require_once (VIEW.$fileName.'.php');
 			return $this->bodyParameters;
-			//return array_values($bodyParameters);
 		}else{
 			echo "View  render() doesn't exists";
 		}
