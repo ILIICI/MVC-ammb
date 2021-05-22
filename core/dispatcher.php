@@ -15,7 +15,7 @@ class Dispatcher{
 
 	public function getControler(){
 		$array = $this->requestURL();
-		if(!empty($array[0])){
+		if(!empty($array[0]) && file_exists(CONTROLLER.$array[0].'Controller.php')){
 			return ucfirst($array[0]);	
 		}else{
 			return 'Home';

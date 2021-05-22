@@ -7,8 +7,6 @@ class HomeController extends Controller
 		
 		$this->render(
 			'HomeView',
-			$this->sqlQuery('HomeModel','getData'),
-			$this->sqlQuery('HomeModel','getData'),
 			$this->sqlQuery('HomeModel','getData')
 		);
 

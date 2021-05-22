@@ -3,7 +3,7 @@ require_once(MODEL.'Model.php');
 /**
  * 
  */
-class HomeModel extends Model
+class ContactModel extends Model
 {
 	
 	public function getData(){
