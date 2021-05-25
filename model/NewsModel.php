@@ -7,15 +7,15 @@ class NewsModel extends Model
 {
 	
 	public function getData(){
-		$query = "SELECT * FROM navbar"  ; 
+		$query = "SELECT * FROM news"  ; 
 		$stmt = $this->connect()->query($query);
-		while ($row = $stmt->fetchALL()) {
+		while ($row = $stmt->fetch( PDO::FETCH_ASSOC )) {
 			return $row;
 		}
 	}
 
-		public function getText(){
-		$query = "SELECT * FROM learn"  ; 
+		public function getText($param=''){
+		$query = "SELECT * FROM news WHERE id=$param"  ; 
 		$stmt = $this->connect()->query($query);
 		while ($row = $stmt->fetchALL()) {
 			return $row;

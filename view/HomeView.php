@@ -1,4 +1,3 @@
-
 <?php
-echo $bodyParameters[4]['navbarText'];?>
+echo $bodyParameters['articleText'];?>
 <br>

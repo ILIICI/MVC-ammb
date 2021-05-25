@@ -9,5 +9,7 @@ define('PUBLIC',DS.'public'.DIRECTORY_SEPARATOR);
 
 require_once(CORE.'application.php');
 
+
 new Application;
+
 ?>

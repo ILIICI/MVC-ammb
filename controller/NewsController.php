@@ -19,6 +19,22 @@ class NewsController extends Controller
 		);
 	}
 
+			public function vit($param=null){
+			
+			if($param = null){
+			$this->render(
+			'NewsPostView',
+			$this->sqlQuery('NewsModel','getText')
+		);
+			}else{
+			$this->render(
+			'NewsPostView',
+			$this->sqlQuery('NewsModel','getText'.$param[0])
+		);
+			}
+
+	}
+
 }
 
-?>
+?> 

@@ -11,14 +11,14 @@ class View
 	}
 
 	public function render ($fileNameView,$bodyParameters=[]){
-		$this->header();
+		$this->header($bodyParameters);
 		$this->body($fileNameView,$bodyParameters);
 		$this->footer();
 	}
-	private function header(){
+	private function header($bodyParameters=[]){
 		if (file_exists(VIEW.'layout'.DIRECTORY_SEPARATOR.'Header.php')) {
 			require_once (VIEW.'layout'.DIRECTORY_SEPARATOR.'Header.php');
-			//return $this->headerParameters;
+			return $this->bodyParameters;
 		}else{
 			echo "View  Header doesn't exists";
 		}
@@ -35,7 +35,6 @@ class View
 	private function footer(){
 		if (file_exists(VIEW.'layout'.DIRECTORY_SEPARATOR.'Footer.php')) {
 			require_once (VIEW.'layout'.DIRECTORY_SEPARATOR.'Footer.php');
-			//return $this->footerParameters;
 		}else{
 			echo "View  Footer doesn't exists";
 		}

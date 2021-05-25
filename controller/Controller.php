@@ -7,9 +7,9 @@ class Controller{
 		$view = new View($ViewFileName,$bodyParameters);
 	}
 
-	public function sqlQuery($model,$function){
+	public function sqlQuery($model,$function,$param=null){
 		$objModel = new $model;
-		return $objModel->$function();
+		return $objModel->$function($param);
 	}
 
 }

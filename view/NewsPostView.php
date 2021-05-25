@@ -1,4 +1,4 @@
 
 <?php
-echo $bodyParameters[1]['name'];?>
+echo $bodyParameters[0]['name'];?>
 <br>

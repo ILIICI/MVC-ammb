@@ -7,9 +7,9 @@ class EventsModel extends Model
 {
 	
 	public function getData(){
-		$query = "SELECT * FROM navbar"  ; 
+		$query = "SELECT * FROM events"  ; 
 		$stmt = $this->connect()->query($query);
-		while ($row = $stmt->fetchALL()) {
+		while ($row = $stmt->fetch()) {
 			return $row;
 		}
 	}
