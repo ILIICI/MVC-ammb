@@ -1,0 +1,48 @@
+.navbar{
+	background-color: #06273a;
+	padding: 0rem 0.3rem ;
+	font-size: 1.3rem;
+}
+.navbar-nav{
+	margin-left: 1rem;
+}
+.navbar-brand{
+	padding-top: 0rem;
+	padding-bottom: 0rem;
+}
+img.logo {
+	max-height: 4rem;
+}
+.custom-toggler.navbar-toggler {
+	border-color: #f8f9fa;
+}
+.custom-toggler .navbar-toggler-icon {
+	background-image: url(
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.dropdown-menu{
+	background-color: #06273a;
+}
+.nav-link{
+	color: white;
+	font-weight: 400;
+}
+.nav-item{
+	a:hover{
+		-moz-transform: scale(1.1) translate(5px, 0px);
+		-webkit-transform: scale(1.1) translate(5px, 0px);
+		-o-transform: scale(1.1) translate(5px, 0px);
+		-ms-transform: scale(1.1) translate(5px, 0px);
+		transform: scale(1.1) translate(5px, 0px);
+		color: white;
+		background-color: transparent;
+	}
+}
+.dropdown-item:hover{
+	color: white;
+	background-color: transparent;
+}
+.dropdown-item{
+	color: white;
+	font-weight: 400;
+}
