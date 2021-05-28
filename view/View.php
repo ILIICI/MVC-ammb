@@ -11,9 +11,14 @@ class View
 	}
 
 	public function render ($fileNameView,$bodyParameters=[]){
-		$this->header($bodyParameters);
-		$this->body($fileNameView,$bodyParameters);
-		$this->footer();
+		if($fileNameView == 'AdminView'){
+			$this->body($fileNameView,$bodyParameters);
+		}else{
+			$this->header($bodyParameters);
+			$this->body($fileNameView,$bodyParameters);
+			$this->footer();
+		}
+
 	}
 	private function header($bodyParameters=[]){
 		if (file_exists(VIEW.'layout'.DIRECTORY_SEPARATOR.'Header.php')) {

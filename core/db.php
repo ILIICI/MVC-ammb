@@ -10,9 +10,6 @@ class Db
 	protected function connect(){
 		$dsn = 'mysql:host=' . $this->localhost . ';dbname=' . $this->dbname;
 		$pdo = new PDO($dsn,$this->user,$this->pass);
-
-
-		
 		return $pdo;
 	}
 }
